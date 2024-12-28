@@ -1,0 +1,7 @@
+langchain
+Groq
+langchain_core
+langchain_groq
+streamlit
+langchain_community
+beautifulsoup4
