@@ -125,13 +125,13 @@ def main():
             # print("----------------------------------")
 
             user_query  = f"""
-Write a Linkedin post using the below content. You have to summarize the content and write a compelling Linkedin post making sure all the important information is retained in the post. The content to use as reference is as follows:
+Write a Linkedin post using the below content. You have to summarize the content and write a compelling Linkedin post making sure all the important information is retained in the post. The tone of the post should  be human-like and professional. Before writing the post brainstorm a  few ideas for the post like how to make the post engaging, relevant and useful. The content to use as reference is as follows:
 
 {web_context}
 "
 """
         else:
-            user_query = f"""{user_query} .The content length should be around "+{str(content_length)} words."""
+            user_query = f"""{user_query} .The content length should be around "+{str(content_length)} words. The tone of the post should  be human-like and professional. Before writing the post brainstorm a  few ideas for the post like how to make the post engaging, relevant and useful."""
 
         response = conversation.predict(human_input=user_query)
 
