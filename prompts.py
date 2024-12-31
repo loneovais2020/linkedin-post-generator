@@ -28,7 +28,12 @@ Consider adding a "Takeaway" or "Key Point" section
 Technical Guidelines:-
 
 Use appropriate line spacing for visual appeal
-Incorporate bullet points only if they enhance readability. Seperate each point with a line break
+Incorporate bullet points only if they enhance readability. Seperate each point with a line break. E.g.,
+
+- Point 1
+- Point 2
+- etc
+
 Use line breaks to create a visually appealing layout like \n or \n\n
 Ensure all claims are supported by the source content
 Do not include   intext citations.
@@ -48,7 +53,7 @@ Make sure to provide the post in markdown format ready to be copied and pasted i
 
 def linkedin_post_prompt(user_query, content_length, web_context = None):
     if web_context is None:
-        prompt = f""" {BASE_PROMPT_FOR_POST} The user query is: {user_query}. The optimal length of the post should be around: {content_length}"""
+        prompt = f""" {BASE_PROMPT_FOR_POST} The user query is: {user_query}. Do not make any claims without supporting evidence. The optimal length of the post should be around: {content_length}"""
         return prompt
     else:
         prompt = f""" {BASE_PROMPT_FOR_POST} \nThe user query is: {user_query} \nThe context that you have to use as reference is\n\n: {web_context}"""
